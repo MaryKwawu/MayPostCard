@@ -1,0 +1,71 @@
+.box {
+  background-color: aquamarine;
+  background-blend-mode: soft-light;
+  background: linear-gradient;
+  margin: 10px;
+  transition: 500ms ease-in-out;
+  height: 55vh;
+  width: 20rem;
+  object-fit: cover;
+  border-radius: 2rem;
+  margin: 40px 60px;
+  border: 15px solid yellowgreen;
+  box-sizing: border-box;
+  float: left;
+  justify-content: space-evenly;
+  flex-direction: column;
+  display: flex;
+  box-shadow: 0 4px 8px #9c27bc;
+  position: relative;
+  content: "$500";
+  z-index: 2;
+  opacity: 1;
+}
+
+body{
+  background-color: #c5cae9;
+}
+
+h1 {
+  font-size: 50px;
+  font-style: oblique;
+  text-align: center;
+  text-align: center;
+  font-size: 5rem;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  width: 20rem;
+  height: 0.5rem;
+  display: block;
+  background-color: rgb(70, 66, 66);
+  left: calc(50% - 10rem);
+  bottom: -1rem;
+  border-radius: 50%;
+}
+
+.box:hover {
+  transform: scale(1.1);
+  animation: linear forwards 1.5s 0.2s cubic-bezier(0.55, 0.055, 0.275, 0.19) forwards,
+    cubic-bezier(0.86, 0, 0.07, 1) forwards;
+}
+
+
+@media (max-width: 500px) {
+  body {
+    background-color:#aa00ff;
+  }
+  .box {
+    background-color: #d500f9;
+  }
+}
+@media (max-width: 1000px) {
+  .box {
+    flex-wrap: wrap;
+  }
+}
+
